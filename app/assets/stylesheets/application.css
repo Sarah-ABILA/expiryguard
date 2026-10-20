@@ -64,3 +64,6 @@ a.product__name:hover { color: #5B3A8E; }
 .qty__btn { width: 34px; height: 34px; border-radius: 50%; border: none; background: #efe9f7; color: #5B3A8E; font-size: 1.2em; font-weight: bold; cursor: pointer; }
 .qty__btn:hover { background: #5B3A8E; color: #fff; }
 .qty__value { min-width: 22px; text-align: center; font-weight: bold; font-size: 1.1em; }
+
+.search { margin-bottom: 10px; }
+.search input { width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid #d8cfe8; border-radius: 20px; font-size: 1em; background: #fff; }

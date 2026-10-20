@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   def index
     @products = Product.order(:expires_on)
     @products = @products.where(location: params[:location]) if params[:location].present?
+    @products = @products.where("name LIKE ?", "%#{params[:q]}%") if params[:q].present?
   end
 
   # GET /products/1 or /products/1.json
