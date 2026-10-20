@@ -24,9 +24,7 @@
     <p class="empty">Rien ici. Profites-en !</p>
   <% end %>
   <% @products.each do |product| %>
-    <%= link_to product, class: "product-link" do %>
-      <%= render product %>
-    <% end %>
+    <%= render product %>
   <% end %>
 </div>
 

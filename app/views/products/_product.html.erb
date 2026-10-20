@@ -1,9 +1,14 @@
 <div id="<%= dom_id product %>" class="product product--<%= product.status %>">
-  <div>
-    <div class="product__name"><%= product.name %></div>
+  <div class="product__info">
+    <%= link_to product.name, product, class: "product__name" %>
     <div class="product__meta">
-      <%= product.location_label %> · Qté : <%= product.quantity %> · <%= product.expires_on.strftime("%d/%m/%Y") %>
+      <%= product.location_label %> · <%= product.expires_on.strftime("%d/%m/%Y") %>
     </div>
+    <div class="product__badge"><%= product.status_label %></div>
   </div>
-  <div class="product__badge"><%= product.status_label %></div>
+  <div class="qty">
+    <%= button_to "−", decrement_product_path(product), class: "qty__btn" %>
+    <span class="qty__value"><%= product.quantity %></span>
+    <%= button_to "+", increment_product_path(product), class: "qty__btn" %>
+  </div>
 </div>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :products
   root "products#index"
+  post "products/:id/increment", to: "quantities#increment", as: :increment_product
+  post "products/:id/decrement", to: "quantities#decrement", as: :decrement_product
   resources :shopping_items, only: [ :index, :create, :destroy ]
   post "products/:id/finish", to: "shopping_items#finish_product", as: :finish_product
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

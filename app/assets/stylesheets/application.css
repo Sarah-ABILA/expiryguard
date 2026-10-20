@@ -55,3 +55,12 @@ h1 { color: #5B3A8E; margin-bottom: 0; }
 .shopping-form input[type=text] { flex: 1; padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 8px; }
 .shopping-form .btn { margin-top: 0; }
 .shopping-item { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 10px 16px; border-radius: 10px; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+
+a.product__name { color: inherit; text-decoration: none; display: block; }
+a.product__name:hover { color: #5B3A8E; }
+.product__badge { display: inline-block; margin-top: 6px; }
+.qty { display: flex; align-items: center; gap: 8px; }
+.qty form { margin: 0; }
+.qty__btn { width: 34px; height: 34px; border-radius: 50%; border: none; background: #efe9f7; color: #5B3A8E; font-size: 1.2em; font-weight: bold; cursor: pointer; }
+.qty__btn:hover { background: #5B3A8E; color: #fff; }
+.qty__value { min-width: 22px; text-align: center; font-weight: bold; font-size: 1.1em; }
