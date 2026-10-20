@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_10_20_205321) do
+ActiveRecord::Schema[8.1].define(version: 2026_10_20_214528) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.date "expires_on"
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "location", default: "frigo", null: false
   end
 end

@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   # GET /products or /products.json
   def index
     @products = Product.order(:expires_on)
+    @products = @products.where(location: params[:location]) if params[:location].present?
   end
 
   # GET /products/1 or /products/1.json
@@ -65,6 +66,6 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.expect(product: [ :name, :expires_on, :quantity ])
+      params.expect(product: [ :name, :expires_on, :quantity, :location ])
     end
 end

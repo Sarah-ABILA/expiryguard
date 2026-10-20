@@ -4,7 +4,24 @@
 <h1>ExpiryGuard</h1>
 <p class="subtitle">Mon frigo, sous surveillance</p>
 
+<% all = Product.all.to_a %>
+<div class="summary">
+  <span class="pill pill--expired"><%= all.count { |p| p.status == "expired" } %> périmé(s)</span>
+  <span class="pill pill--soon"><%= all.count { |p| p.status == "soon" } %> bientôt</span>
+  <span class="pill pill--ok"><%= all.count { |p| p.status == "ok" } %> OK</span>
+</div>
+
+<nav class="filters">
+  <%= link_to "Tout", products_path, class: token_list("filter", "filter--active": params[:location].blank?) %>
+  <% Product::LOCATIONS.each do |key, label| %>
+    <%= link_to label, products_path(location: key), class: token_list("filter", "filter--active": params[:location] == key) %>
+  <% end %>
+</nav>
+
 <div id="products">
+  <% if @products.empty? %>
+    <p class="empty">Rien ici. Profites-en !</p>
+  <% end %>
   <% @products.each do |product| %>
     <%= link_to product, class: "product-link" do %>
       <%= render product %>

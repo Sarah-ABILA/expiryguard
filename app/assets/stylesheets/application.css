@@ -36,3 +36,14 @@ h1 { color: #5B3A8E; margin-bottom: 0; }
 .btn--danger { background: #d32f2f; }
 .actions { display: flex; gap: 10px; align-items: center; margin-top: 16px; }
 .back { color: #5B3A8E; display: inline-block; margin-top: 16px; }
+
+.summary { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+.pill { padding: 4px 12px; border-radius: 20px; font-size: .85em; font-weight: bold; }
+.pill--expired { background: #fdecea; color: #d32f2f; }
+.pill--soon { background: #fff3e0; color: #e65100; }
+.pill--ok { background: #e8f5e9; color: #2e7d32; }
+.filters { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; }
+.filter { padding: 6px 14px; border-radius: 20px; background: #fff; color: #5B3A8E; text-decoration: none; border: 1px solid #d8cfe8; font-size: .9em; }
+.filter--active { background: #5B3A8E; color: #fff; border-color: #5B3A8E; }
+.empty { color: #777; text-align: center; padding: 20px; }
+.field select { width: 100%; padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 8px; background: #fff; }

@@ -1,6 +1,17 @@
 class Product < ApplicationRecord
+  LOCATIONS = {
+    "frigo" => "🧊 Frigo",
+    "congelateur" => "❄️ Congélateur",
+    "placard" => "🥫 Placard"
+  }.freeze
+
   validates :name, presence: { message: "Le nom du produit est obligatoire" }
   validates :expires_on, presence: { message: "La date de péremption est obligatoire" }
+  validates :location, inclusion: { in: LOCATIONS.keys, message: "Choisis un emplacement" }
+
+  def location_label
+    LOCATIONS[location]
+  end
 
   def days_left
     (expires_on - Date.current).to_i

@@ -2,7 +2,7 @@
   <div>
     <div class="product__name"><%= product.name %></div>
     <div class="product__meta">
-      Quantité : <%= product.quantity %> · Date : <%= product.expires_on.strftime("%d/%m/%Y") %>
+      <%= product.location_label %> · Qté : <%= product.quantity %> · <%= product.expires_on.strftime("%d/%m/%Y") %>
     </div>
   </div>
   <div class="product__badge"><%= product.status_label %></div>
