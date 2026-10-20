@@ -1,10 +1,9 @@
-<p style="color: green"><%= notice %></p>
-
+<p class="notice"><%= notice %></p>
+<% content_for :title, @product.name %>
+<h1><%= @product.name %></h1>
 <%= render @product %>
-
-<div>
-  <%= link_to "Edit this product", edit_product_path(@product) %> |
-  <%= link_to "Back to products", products_path %>
-
-  <%= button_to "Destroy this product", @product, method: :delete %>
+<div class="actions">
+  <%= link_to "Modifier", edit_product_path(@product), class: "btn" %>
+  <%= button_to "Supprimer", @product, method: :delete, class: "btn btn--danger", form: { data: { turbo_confirm: "Supprimer ce produit ?" } } %>
 </div>
+<p><%= link_to "← Retour à la liste", products_path, class: "back" %></p>

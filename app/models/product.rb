@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
-  validates :name, :expires_on, presence: true
+  validates :name, presence: { message: "Le nom du produit est obligatoire" }
+  validates :expires_on, presence: { message: "La date de péremption est obligatoire" }
 
   def days_left
     (expires_on - Date.current).to_i

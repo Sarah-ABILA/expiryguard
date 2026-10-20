@@ -1,11 +1,4 @@
-<% content_for :title, "New product" %>
-
-<h1>New product</h1>
-
+<% content_for :title, "Ajouter un produit" %>
+<h1>Ajouter un produit</h1>
 <%= render "form", product: @product %>
-
-<br>
-
-<div>
-  <%= link_to "Back to products", products_path %>
-</div>
+<p><%= link_to "← Retour à la liste", products_path, class: "back" %></p>
