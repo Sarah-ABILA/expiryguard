@@ -3,6 +3,7 @@
 
 <h1>ExpiryGuard</h1>
 <p class="subtitle">Mon frigo, sous surveillance</p>
+<p><%= link_to "🛒 Liste de courses (#{ShoppingItem.count})", shopping_items_path, class: "shopping-link" %></p>
 
 <% all = Product.all.to_a %>
 <div class="summary">

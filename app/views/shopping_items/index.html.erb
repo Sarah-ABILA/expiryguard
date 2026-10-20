@@ -1,0 +1,22 @@
+<% content_for :title, "Liste de courses" %>
+<h1>🛒 Liste de courses</h1>
+<p class="subtitle">À racheter</p>
+
+<%= form_with model: @shopping_item, class: "shopping-form" do |form| %>
+  <%= form.text_field :name, placeholder: "Ajouter un article…" %>
+  <%= form.submit "Ajouter", class: "btn" %>
+<% end %>
+
+<div class="shopping-list">
+  <% if @shopping_items.empty? %>
+    <p class="empty">Liste vide. Le frigo est plein, ou tu es très organisée.</p>
+  <% end %>
+  <% @shopping_items.each do |item| %>
+    <div class="shopping-item">
+      <span><%= item.name %></span>
+      <%= button_to "✓ Acheté", item, method: :delete, class: "btn btn--small" %>
+    </div>
+  <% end %>
+</div>
+
+<p><%= link_to "← Retour au frigo", products_path, class: "back" %></p>

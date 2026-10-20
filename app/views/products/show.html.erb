@@ -3,6 +3,7 @@
 <h1><%= @product.name %></h1>
 <%= render @product %>
 <div class="actions">
+  <%= button_to "J'ai fini 🛒", finish_product_path(@product), class: "btn btn--finish" %>
   <%= link_to "Modifier", edit_product_path(@product), class: "btn" %>
   <%= button_to "Supprimer", @product, method: :delete, class: "btn btn--danger", form: { data: { turbo_confirm: "Supprimer ce produit ?" } } %>
 </div>

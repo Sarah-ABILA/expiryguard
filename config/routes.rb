@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :products
   root "products#index"
+  resources :shopping_items, only: [ :index, :create, :destroy ]
+  post "products/:id/finish", to: "shopping_items#finish_product", as: :finish_product
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
