@@ -8,3 +8,20 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+body { font-family: system-ui, sans-serif; max-width: 600px; margin: 0 auto; padding: 16px; background: #f6f4fa; color: #222; }
+h1 { color: #5B3A8E; margin-bottom: 0; }
+.subtitle { color: #777; margin-top: 4px; }
+.notice { color: #2e7d32; }
+.product-link { text-decoration: none; color: inherit; }
+.product { display: flex; justify-content: space-between; align-items: center; background: #fff; border-left: 8px solid; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.product__name { font-weight: bold; font-size: 1.1em; }
+.product__meta { color: #666; font-size: .9em; margin-top: 4px; }
+.product__badge { font-weight: bold; font-size: .85em; padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
+.product--expired { border-color: #d32f2f; }
+.product--expired .product__badge { background: #fdecea; color: #d32f2f; }
+.product--soon { border-color: #f57c00; }
+.product--soon .product__badge { background: #fff3e0; color: #e65100; }
+.product--ok { border-color: #388e3c; }
+.product--ok .product__badge { background: #e8f5e9; color: #2e7d32; }
+.btn { display: inline-block; background: #5B3A8E; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; margin-top: 8px; }

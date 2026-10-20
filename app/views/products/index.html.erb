@@ -1,16 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<p class="notice"><%= notice %></p>
+<% content_for :title, "ExpiryGuard" %>
 
-<% content_for :title, "Products" %>
-
-<h1>Products</h1>
+<h1>ExpiryGuard</h1>
+<p class="subtitle">Mon frigo, sous surveillance</p>
 
 <div id="products">
   <% @products.each do |product| %>
-    <%= render product %>
-    <p>
-      <%= link_to "Show this product", product %>
-    </p>
+    <%= link_to product, class: "product-link" do %>
+      <%= render product %>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to "New product", new_product_path %>
+<%= link_to "+ Ajouter un produit", new_product_path, class: "btn" %>

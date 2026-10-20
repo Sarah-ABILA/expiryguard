@@ -1,17 +1,9 @@
-<div id="<%= dom_id product %>">
+<div id="<%= dom_id product %>" class="product product--<%= product.status %>">
   <div>
-    <strong>Name:</strong>
-    <%= product.name %>
+    <div class="product__name"><%= product.name %></div>
+    <div class="product__meta">
+      Quantité : <%= product.quantity %> · Date : <%= product.expires_on.strftime("%d/%m/%Y") %>
+    </div>
   </div>
-
-  <div>
-    <strong>Expires on:</strong>
-    <%= product.expires_on %>
-  </div>
-
-  <div>
-    <strong>Quantity:</strong>
-    <%= product.quantity %>
-  </div>
-
+  <div class="product__badge"><%= product.status_label %></div>
 </div>
