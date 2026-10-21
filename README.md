@@ -1,24 +1,30 @@
-# README
+# 🛡️ ExpiryGuard
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Mon frigo, sous surveillance.** Une application Rails 8 (PWA installable) pour suivre les dates de péremption et réduire le gaspillage alimentaire.
 
-Things you may want to cover:
+## Fonctionnalités
 
-* Ruby version
+- 🎨 Code couleur selon l'urgence : périmé (rouge), bientôt (orange), OK (vert)
+- 🧊 Emplacements : frigo, congélateur, placard, avec filtres
+- 🔍 Recherche de produits
+- ➖➕ Gestion des quantités en un clic
+- 🛒 Liste de courses automatique : un produit terminé y part tout seul
+- 📱 Installable comme une application (PWA)
 
-* System dependencies
+## Stack
 
-* Configuration
+Ruby on Rails 8 · SQLite · Hotwire (Turbo) · CSS sur mesure · PWA
 
-* Database creation
+## Lancer le projet
 
-* Database initialization
+```bash
+bundle install
+rails db:migrate
+rails s
+```
 
-* How to run the test suite
+Puis ouvrir http://localhost:3000
 
-* Services (job queues, cache servers, search engines, etc.)
+---
 
-* Deployment instructions
-
-* ...
+Projet personnel de [Sarah Abila](https://github.com/Sarah-ABILA), développeuse Full-Stack (Le Wagon, 2026).
